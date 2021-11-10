@@ -8,9 +8,8 @@ const Stack = createNativeStackNavigator();
 
 const HomeStack = () => {
   return (
-    // <NavigationContainer>
     <Stack.Navigator
-      // initialRouteName="Home"
+      initialRouteName="Home"
       screenOptions={{
         headerTintColor: "#444",
         headerStyle: {
@@ -26,9 +25,12 @@ const HomeStack = () => {
           headerShown: false,
         }}
       />
-      <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+      <Stack.Screen
+        name="ReviewDetails"
+        component={ReviewDetails}
+        options={{ title: "Review Details" }}
+      />
     </Stack.Navigator>
-    // </NavigationContainer>
   );
 };
 
